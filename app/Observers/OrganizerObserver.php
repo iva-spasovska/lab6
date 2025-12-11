@@ -12,7 +12,7 @@ class OrganizerObserver
      */
     public function created(Organizer $organizer): void
     {
-        session()->flash('message', "New Organizer Created: {$organizer->full_name}");
+        Log::info("Organizer created: {$organizer->full_name}");
     }
 
     /**
