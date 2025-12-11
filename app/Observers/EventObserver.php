@@ -12,7 +12,7 @@ class EventObserver
      */
     public function created(Event $event): void
     {
-        session()->flash('message', "New Event Added: {$event->name}");
+        Log::info("Event created: {$event->name}");
     }
 
     /**
@@ -36,7 +36,7 @@ class EventObserver
      */
     public function restored(Event $event): void
     {
-        Log::info("Organizer restored: {$event->name}");
+        Log::info("Event restored: {$event->name}");
     }
 
     /**
